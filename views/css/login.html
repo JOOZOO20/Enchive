@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="../css/login.css">
+
+</head>
+
+<body>
+
+    <div class="mainDiv">
+        <div class="sub">
+            <div class="Encheive">Encheive</div>
+
+            <div class="up">
+                <div class="id" id="inputButton">
+                    <form  method="post" action="/new">
+                        <input class="bts" type="text" id="id" name="id" placeholder="   아이디">
+                    </form>
+                </div>
+    
+                <div class="password" id="inputButton">
+                    <form method="post" action="/new">
+                        <input class="bts" type="text" id="pw" name="pw" placeholder="   비밀번호">
+                    </form>
+                </div>
+    
+                <div class="login" id="inputButton">
+                    <input type="submit" id="loginBt" class="bts" value="로그인" onclick="location.href='home.html'">
+                </div>
+            </div>
+            
+
+
+            <div class="bottom">
+                <div class="signUp">
+                    <input class="bottom_bts" type="submit" value="회원가입" onclick="location.href='signup.html'">
+                </div>
+                <div class="finId">
+                    <input class="bottom_bts" type="submit" value="아이디 찾기" onclick="location.href='findId.html'">
+                </div>
+                <div class="findPw">
+                    <input class="bottom_bts" type="submit" value="비밀번호 찾기" onclick="location.href='findPw.html'">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
