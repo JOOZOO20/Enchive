@@ -6,7 +6,7 @@ Enjoy + Archive 가 결합된 단어로 공연, 운동경기, 영화, 드라마 
 ## ◽ Front
 * Html, CSS
   
-~~* Jquery~~
+~~ *  Jquery~~
 <br>
 
 ## ◾ Back 
