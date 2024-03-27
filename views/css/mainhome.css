@@ -1,0 +1,57 @@
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner{
+    width: 30vw;
+    height: 10vh;
+    background-color:rgba(255, 205, 205, 1);
+    border: 1px rgba(255, 205, 205, 1) solid;
+    border-radius: 10px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    /* 텍스트 관련 (크기, 폰트 등) */
+    font-size: 3rch;
+    font-family: 'LOTTERIACHAB';
+
+    /*외부 요소와의 관계*/
+    margin-top: 30px;
+    margin-bottom: 6.5em;
+}
+
+.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /*원을 결정짓는 것들*/
+    border: 1px rgba(252, 239, 239, 1) solid;
+    border-radius: 50%;
+    background-color: rgba(252, 239, 239, 1);
+
+    /*원의 크기*/
+    width: 250px;
+    height: 250px;
+
+    /*내부 텍스트 관련*/
+    font-size: 20px;
+    font-family: 'SBAggroB';
+}
+
+img{
+    width: 80px;
+    height: 80px;
+
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
