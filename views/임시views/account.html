@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계정</title>
+
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/font.css">
+</head>
+
+<body>
+    <div class="allwrapper">
+        <div class="backbutton">
+            <img src="../img/toleftarrow.png" alt="이미지" onclick="location.href='bookmain.html'">
+        </div>
+
+        <div class="info">
+            계정 확인
+        </div>
+
+
+        <div class="middleWrapper">
+            <!--계정 정보 나열한 것들-->
+            <div class="user">
+                <div class="idInfo">
+                    <div class="idText">아이디</div>
+                    <div class="id"></div>
+                </div>
+
+                <div class="nameInfo">
+                    <div class="nameText">이름</div>
+                    <div class="name">
+                        <form action="#">
+                            <input type="text">
+                            <button>변경하기</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="pwInfo">
+                    <div class="pwText">비밀번호<br>변경하기</div>
+                    <div class="pw" onclick="location.href='changePw.html'">비밀번호 변경하러 가기</div>
+                </div>
+
+            </div>
+
+            <!--사진 추가 부분-->
+            <div class="photo" id="imageContainer">
+                <span id="imagePrompt">회원님을 대표하는 이미지를 골라주세요!</span>
+                <input type="file" id="profileImageUpload" accept="image/*" onchange="previewImage(event)"
+                    style="display: none;">
+                <img id="profileImagePreview" style="display: none;" />
+            </div>
+
+
+
+        </div>
+
+        <script src="../js/account.js"></script>
+    </div>
+</body>
+
+</html>
