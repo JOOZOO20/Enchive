@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인테마 추가하기</title>
+
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <!-- <link rel="stylesheet" href="../css/addMainbook.css"> -->
+    <link rel="stylesheet" href="../css/newAddMainbook.css">
+
+</head>
+
+<body>
+    <div class="allwrapper">
+
+        <div class="backbutton">
+            <img src="../img/toleftarrow.png" alt="이미지" onclick="location.href='mainhome.html'">
+        </div>
+
+        <div class="info">
+            메인 북 추가하기
+        </div>
+
+
+
+
+        <div class="title">
+            <div class="text"> 메인북 title </div>
+            <div class="text_input">
+                <input type="text">
+            </div>
+        </div>
+
+
+
+        <div class="addcover">
+            <div class="text"> 커버 추가하기 </div>
+            <div class="uploading">
+                <form method="post" enctype="multipart/form-data" id="image-upload">
+                    <div class="button">
+                        <label for="chooseFile">👉 사진 업로드 클릭👈</label>
+                    </div>
+
+                    <div class="image-show">사진 업로드 되지 않았습니다.</div>
+                    <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(event)">
+                </form>
+
+                <div class="fileContainer">
+                    <div class="fileInput">
+                        <p>FILE NAME: <span id="fileName"></span></p>
+                    </div>
+                    <div class="buttonContainer">
+                        <div class="submitButton" id="submitButton">SUBMIT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="changeButton">
+            <form action="../views/mainhome.html" method="#">
+                <button>완료하기</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
