@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 쓰기</title>
+
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/writing.css">
+</head>
+
+<body>
+    <div class="allwrapper">
+        <div class="logo">
+            Enchive
+        </div>
+
+        <div class="navi">
+            <div class="main theme" onclick="location.href='mainhome.html'">메인 테마</div>
+            <div class="now theme" onclick="location.href='bookmain.html'">현재 테마</div>
+            <div class="account" onclick="location.href='account.html'">계정</div>
+        </div>
+
+        <div class="middleWrapper">
+            <div class="photo">
+                <!-- "오늘의 사진 추가하기" 텍스트를 담은 span 태그 추가 -->
+                <div class="photo1" onclick="triggerUpload('fileUpload1')">
+                    <span id="textPhoto1">오늘의 사진 추가하기 1</span>
+                    <input type="file" id="fileUpload1" name="photo1" accept="image/*"
+                        onchange="previewImage(event, 'photoPreview1', 'textPhoto1')" style="display: none;">
+                    <img id="photoPreview1" style="display: none;" />
+                </div>
+                <div class="photo2" onclick="triggerUpload('fileUpload2')">
+                    <span id="textPhoto2">오늘의 사진 추가하기 2</span>
+                    <input type="file" id="fileUpload2" name="photo2" accept="image/*"
+                        onchange="previewImage(event, 'photoPreview2', 'textPhoto2')" style="display: none;">
+                    <img id="photoPreview2" style="display: none;" />
+                </div>
+
+            </div>
+
+            <div class="wrapper">
+                <form action="board.html" method="post">
+                    <table>
+                        <tr>
+                            <td class="header">Title</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="제목을 입력하세요" name="title"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">Comment</td>
+                        </tr>
+                        <tr>
+                            <td><textarea placeholder="내용을 입력하세요" name="detail"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="등록" onclick="alert('작성 완료!')"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+<script src="../js/writing.js"></script>
+</body>
+
+</html>
