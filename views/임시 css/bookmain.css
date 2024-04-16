@@ -1,0 +1,95 @@
+
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner{
+    width: 30vw;
+    height: 7.5vh;
+    background-color:rgba(255, 205, 205, 1);
+    border: 1px rgba(255, 205, 205, 1) solid;
+    border-radius: 10px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    /* 텍스트 관련 (크기, 폰트 등) */
+    font-size: 3rch;
+    font-family: 'LOTTERIACHAB';
+
+    /*외부 요소와의 관계*/
+    margin-top: 30px;
+    margin-bottom: 2em;
+}
+
+.bar{
+    width: 100vw;
+    height: 5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: rgba(255, 225, 225, 1);
+
+    font-size: 12px;
+    font-family: 'SBAggroB';
+}
+
+
+/*새로운 글이 추가될 경우를 대비하여 미리 flex화 해놓음*/
+.content{
+    display: flex;
+    align-items: center;
+    
+
+
+
+    background-color: rgba(255, 245, 245, 1);
+
+    /*외부와의 관계 (Ex. 벽과의 거리 조정 등)*/
+
+}
+
+/* add부분 */
+.add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /*내부 텍스트 관련*/
+    font-family: 'TTLaundryGothicB';
+
+    /*block의 크기 및 요소*/
+    width: 25vw;
+    height: 60vh;
+
+    border: 2px rgb(197, 197, 197) solid;
+    border-radius: 10px;
+    background-color: rgba(254, 237, 237, 1);
+
+    /*외부 요소와의 관계*/
+    margin-top: 6vh;
+    margin-left: 30px;
+}
+
+.add:hover{
+    box-shadow: 3px 3px 3px 3px gray;
+}
+
+img{
+
+    width:80px;
+    height: 80px;
+
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
