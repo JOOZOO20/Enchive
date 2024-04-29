@@ -12,10 +12,6 @@ Enjoy + Archive 가 결합된 단어로 공연, 운동경기, 영화, 드라마 
 <br>
 
 ## ◾ Back  
-* Spring (업로드는 아직,,)
+* Spring
+* (현재까진) mabtis
 
-# 🚩사용 예정 혹은 사용할 지도 모르는 기술 (예비)
-* jquery
-* mybatis
-* Spring boot
- 
