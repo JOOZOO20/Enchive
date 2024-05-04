@@ -7,10 +7,13 @@ Enjoy + Archive 가 결합된 단어로 공연, 운동경기, 영화, 드라마 
 * Html
 * css 
 * js 
-  
 
 <br>
 
 ## ◾ Back  
 * Spring
 * JPA
+
+# 🚩전체 개발 기간
+
+# 🚩참여인원
