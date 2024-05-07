@@ -1,0 +1,17 @@
+package net.skhu.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+
+@Controller
+public class FindIdController {
+
+	@GetMapping("/findId")
+	public String Home(Model model) {
+
+		return "findId";
+	}
+
+}
