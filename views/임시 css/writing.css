@@ -1,46 +1,46 @@
 /*글쓰기 관련, from internet*/
 
 table {
-    margin: auto;
+  margin: auto;
 }
 input[type="text"] {
-    border: 1.5px rgb(68, 136, 244) solid;
-    width: 500px;
-    height: 30px;
-    border-radius: 5px;
-    padding-left: 10px;
+  border: 1.5px rgb(68, 136, 244) solid;
+  width: 500px;
+  height: 30px;
+  border-radius: 5px;
+  padding-left: 10px;
 }
 textarea {
-    border: 1.5px rgb(68, 136, 244) solid;
-    width: 500px;
-    height: 380px;
-    border-radius: 5px;
-    padding-left: 10px;
-    padding-top: 10px;
-    resize: none;
+  border: 1.5px rgb(68, 136, 244) solid;
+  width: 500px;
+  height: 380px;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 10px;
+  resize: none;
 }
 .header {
-    height: 30px;
+  height: 30px;
 }
 input[type="submit"] {
-    width: 100%;
-    height: 40px;
-    font-size: 15px;
-    border: 0;
-    outline: 1.5px rgb(68, 136, 244) solid;
-    border-radius: 5px;
-    padding-left: 10px;
-    background-color: rgb(164, 199, 255);
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+  border: 0;
+  outline: 1.5px rgb(68, 136, 244) solid;
+  border-radius: 5px;
+  padding-left: 10px;
+  background-color: rgb(164, 199, 255);
 }
 input[type="submit"]:active {
-    width: 100%;
-    height: 40px;
-    font-size: 15px;
-    border: 0;
-    border-radius: 5px;
-    outline: 1.5px rgb(27, 76, 155) solid;
-    padding-left: 10px;
-    background-color: rgb(68, 136, 244);
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 5px;
+  outline: 1.5px rgb(27, 76, 155) solid;
+  padding-left: 10px;
+  background-color: rgb(68, 136, 244);
 }
 
 
@@ -49,43 +49,43 @@ input[type="submit"]:active {
 
 /*아래부턴 직접 작성*/
 .allwrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    font-family: 'LOTTERIACHAB';
-    font-size: 1.5em;
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke: 0.75px rgb(0, 0, 0);
+  font-family: 'LOTTERIACHAB';
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0.75px rgb(0, 0, 0);
 
-    margin-top: 20px;
-    margin-bottom: 50px;
-    
+  margin-top: 20px;
+  margin-bottom: 50px;
 
-    border: 1px rgba(255, 176, 176, 1) solid;
-    border-radius: 10px;
-    background-color: rgba(255, 176, 176, 1);
 
-    width: 20vw;
-    height: 7vh;
+  border: 1px rgba(255, 176, 176, 1) solid;
+  border-radius: 10px;
+  background-color: rgba(255, 176, 176, 1);
+
+  width: 20vw;
+  height: 7vh;
 }
 
 .navi{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'TTLaundryGothicB';
-    width: 98.5vw;
-    height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'TTLaundryGothicB';
+  width: 98.5vw;
+  height: 5vh;
 
-    background-color: rgba(255, 225, 225, 1);
+  background-color: rgba(255, 225, 225, 1);
 }
 
 
@@ -93,45 +93,45 @@ input[type="submit"]:active {
 
 
 .middleWrapper{
-    width: 98.5vw;
+  width: 98.5vw;
 
-    font-family: 'SUITE-Regular';
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-family: 'SUITE-Regular';
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .photo{
-    margin-right: 10vw;
+  margin-right: 10vw;
 
-    width: 400px;
-    height: 500px;
+  width: 400px;
+  height: 500px;
 }
 
 /* 사진 추가 영역의 텍스트를 스타일링 */
 .photo1 span, .photo2 span {
-    position: absolute;
-    z-index: 10;
-    color: black; /* 글자색 변경 필요 시 수정 */
+  position: absolute;
+  z-index: 10;
+  color: black; /* 글자색 변경 필요 시 수정 */
 }
 
 .photo1, .photo2 {
-    border: 2px rgb(248, 225, 225) solid;
-    border-radius: 10px;
-    border-collapse: collapse;
-    position: relative;
-    width: 100%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border: 2px rgb(248, 225, 225) solid;
+  border-radius: 10px;
+  border-collapse: collapse;
+  position: relative;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .photo1 img, .photo2 img {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
 }
