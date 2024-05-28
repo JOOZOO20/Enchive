@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메인 홈</title>
-    <link rel="stylesheet" href="../css/font.css">
-    <link rel="stylesheet" href="../css/mainhome.css">
+    <link th:href="@{/css/font.css}" rel="stylesheet" />
+    <link th:href="@{/css/mainhome.css}" rel="stylesheet" />
+    <!--아래는 vscode에서 test용도-->
+<!--   <link rel="stylesheet" href="../static/css/mainhome.css">-->
 
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="banner">
+        <div class="banner" th:onclick="|location.href='@{/mainhome}'|">
             Main Home 🏠
-        </div> 
+        </div>
 
         <div class="content">
-
-            <!--만약 기존에 작성한 글이 없으면 theme1은 보이지 않음.-->
-            <div class="theme1">
-                <img  class="themeImg" src="" alt="사용자가 정한 테마 이미지">
-                <div class="ment">
-                    사용자가 정한 테마 제목
+            <!-- 데이터가 있을 때만 theme-list를 렌더링하도록 조건 추가 -->
+            <div th:if="${themes != null and !themes.isEmpty()}">
+                <div class="theme-list">
+                    <div class="theme" th:each="theme : ${themes}">
+                        <div class="minibox" th:onclick="'window.location.href=\'bookmain?id=' + ${theme.id} + '\''">
+                            <h2 class="theme-text" th:text="${theme.title}">테마 제목</h2>
+                            <!-- <img th:src="@{'/uploads/' + ${theme.theme_image}}" alt="테마 이미지" /> -->
+                        </div>
+                    </div>
                 </div>
             </div>
-    
+            <!-- 여기까지 조건 추가 -->
+
+
             <div class="add">
-                <img src="../img/addlogo.png" alt="이미지" onclick="location.href='addMainbook.html'">
+                <img th:src="@{/img/addlogo.png}" alt="이미지" th:onclick="|location.href='@{/addmainbook}'|">
                 추가하기
             </div>
         </div>
-        </div>
 
+    </div>
 </body>
 
 </html>
