@@ -1,46 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<html xmlns:th="http://thymeleaf.org">
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<html xmlns:th="http://thymeleaf.org">-->
 
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>메인 홈</title>-->
+<!--    <link th:href="@{/css/font.css}" rel="stylesheet" />-->
+<!--    <link th:href="@{/css/mainhome.css}" rel="stylesheet" />-->
+<!--    &lt;!&ndash;아래는 vscode에서 test용도&ndash;&gt;-->
+<!--&lt;!&ndash;   <link rel="stylesheet" href="../static/css/mainhome.css">&ndash;&gt;-->
+
+<!--</head>-->
+
+<!--<body>-->
+<!--    <div class="wrapper">-->
+<!--        <div class="banner" th:onclick="|location.href='@{/mainhome}'|">-->
+<!--            Main Home 🏠-->
+<!--        </div>-->
+
+<!--        <div class="content">-->
+<!--            <div class="theme-list">-->
+<!--                <div class="theme" th:each="theme : ${themes}">-->
+<!--                    <div class="minibox"  th:onclick="'window.location.href=\'bookmain?id=' + ${theme.id} + '\''">-->
+<!--                        <h2 class="theme-text" th:text="${theme.title}">테마 제목</h2>-->
+
+<!--                        &lt;!&ndash;            <img th:src="@{'/uploads/' + ${theme.theme_image}}" alt="테마 이미지" />&ndash;&gt;-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="add">-->
+<!--                <img th:src="@{/img/addlogo.png}" alt="이미지" th:onclick="|location.href='@{/addmainbook}'|">-->
+<!--                추가하기-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--</body>-->
+
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메인 홈</title>
     <link th:href="@{/css/font.css}" rel="stylesheet" />
     <link th:href="@{/css/mainhome.css}" rel="stylesheet" />
-    <!--아래는 vscode에서 test용도-->
-<!--   <link rel="stylesheet" href="../static/css/mainhome.css">-->
-
 </head>
-
 <body>
-    <div class="wrapper">
-        <div class="banner" th:onclick="|location.href='@{/mainhome}'|">
-            Main Home 🏠
-        </div>
+<div class="wrapper">
+    <div class="banner" th:onclick="|location.href='@{/mainhome}'|">
+        Main Home 🏠
+    </div>
 
-        <div class="content">
-            <!-- 데이터가 있을 때만 theme-list를 렌더링하도록 조건 추가 -->
-            <div th:if="${themes != null and !themes.isEmpty()}">
-                <div class="theme-list">
-                    <div class="theme" th:each="theme : ${themes}">
-                        <div class="minibox" th:onclick="'window.location.href=\'bookmain?id=' + ${theme.id} + '\''">
-                            <h2 class="theme-text" th:text="${theme.title}">테마 제목</h2>
-                            <!-- <img th:src="@{'/uploads/' + ${theme.theme_image}}" alt="테마 이미지" /> -->
-                        </div>
-                    </div>
+    <div class="content">
+        <div class="theme-list">
+            <div class="theme" th:each="theme : ${themes}">
+                <div class="minibox" th:onclick="'window.location.href=\'bookmain?id=' + ${theme.id} + '\''">
+                    <h2 class="theme-text" th:text="${theme.title}">테마 제목</h2>
                 </div>
             </div>
-            <!-- 여기까지 조건 추가 -->
+        </div>
 
-
-            <div class="add">
-                <img th:src="@{/img/addlogo.png}" alt="이미지" th:onclick="|location.href='@{/addmainbook}'|">
-                추가하기
+        <!-- 글 목록이 비어있지 않을 때만 네모 박스 렌더링 -->
+        <div th:if="${hasThemes==true}">
+            <!-- 네모 박스 내용 -->
+            <div class="post-item">
+                <h2 th:text="${themes.get(0).title}">게시물 제목</h2>
             </div>
         </div>
 
+        <div class="add" th:onclick="|location.href='@{/addmainbook}'|">
+            <img th:src="@{/img/addlogo.png}" alt="이미지">
+            추가하기
+        </div>
     </div>
+</div>
 </body>
-
 </html>
