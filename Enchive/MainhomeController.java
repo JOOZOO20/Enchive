@@ -22,6 +22,25 @@ public class MainhomeController {
     @Autowired
     private ThemeService themeService;
 
+//    @GetMapping("/mainhome")
+//    public String home(HttpSession session, Model model) {
+//        String userId = (String) session.getAttribute("userId");
+//        if (userId != null) {
+//            List<ThemeEntity> themes = themeService.findByUserId(userId);
+//            model.addAttribute("themes", themes);
+//
+//            if (session.getAttribute("selectedThemeId") == null && !themes.isEmpty()) {
+//                session.setAttribute("selectedThemeId", themes.get(0).getId());
+//            }
+//
+//            // 글 목록이 비어있는지 여부를 모델에 추가
+//            model.addAttribute("hasThemes", !themes.isEmpty());
+//
+//            return "mainhome";
+//        } else {
+//            return "redirect:/login";
+//        }
+//    }
     @GetMapping("/mainhome")
     public String home(HttpSession session, Model model) {
         String userId = (String) session.getAttribute("userId");
@@ -33,11 +52,15 @@ public class MainhomeController {
                 session.setAttribute("selectedThemeId", themes.get(0).getId());
             }
 
+            // 글 목록이 비어있는지 여부를 모델에 추가
+            model.addAttribute("hasThemes", !themes.isEmpty());
+
             return "mainhome";
         } else {
             return "redirect:/login";
         }
     }
+
 
     @GetMapping("/addmainbook")
     public String Addmainbook(Model model) {
