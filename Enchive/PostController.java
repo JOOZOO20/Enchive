@@ -5,6 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import net.skhu.entity.ThemeEntity;
+import net.skhu.repository.PostRepository;
+import net.skhu.repository.UserRepository;
 import net.skhu.service.ThemeService;
 import org.springframework.ui.Model;
 import jakarta.servlet.http.HttpSession;
@@ -16,6 +18,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import net.skhu.entity.UserEntity;
 import net.skhu.service.UserService;
@@ -31,6 +34,11 @@ public class PostController {
 
     @Autowired
     private UserService userService;  // UserService 주입
+
+    @Autowired
+    private PostRepository postRepository;
+
+
 
     @GetMapping("/bookmain")
     public String bookMain(HttpSession session, Model model) {
@@ -93,6 +101,92 @@ public class PostController {
         postService.savePost(post);
 
         return "redirect:/bookmain";
+    }
+
+
+    // 글을 수정할 때 데이터를 불러오는 메서드 추가
+    @GetMapping("/edit")
+    public String getPostByIdForEdit(@RequestParam("id") Integer id, Model model) {
+        PostEntity post = postService.findPostById(id);
+        model.addAttribute("post", post);
+        return "edit";
+    }
+
+    // 글을 업데이트하는 메서드
+    @PostMapping("/updatePost")
+    public String updatePost(@RequestParam("id") Integer id,
+                             @RequestParam("title") String title,
+                             @RequestParam("detail") String content,
+                             @RequestParam(value = "photo1", required = false) MultipartFile photo1) {
+        PostEntity post = postService.findPostById(id);
+        if (post != null) {
+            post.setTitle(title);
+            post.setContent(content);
+            if (photo1 != null && !photo1.isEmpty()) {
+                // 이미지 저장 로직 추가
+                String fileName = saveImage(photo1);
+                if (fileName != null) {
+                    post.setPost_image(fileName);
+                }
+            }
+            postService.savePost(post);
+        }
+        return "redirect:/bookmain";
+    }
+    // 이미지 저장 메서드 추가
+    private String saveImage(MultipartFile file) {
+        // 업로드 파일을 저장할 절대 경로 설정
+        String uploadDir = "src/main/resources/uploads";
+        Path uploadPath = Paths.get(uploadDir);
+
+        if (!Files.exists(uploadPath)) {
+            try {
+                Files.createDirectories(uploadPath);
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+
+        try {
+            String fileName = file.getOriginalFilename();
+            fileName = fileName.replace(" ", "_");
+            Path filePath = uploadPath.resolve(fileName);
+
+            if (!Files.exists(filePath)) {
+                Files.copy(file.getInputStream(), filePath);
+            }
+
+            return fileName;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
+    @GetMapping("delete")
+    public String delete(Model model, int id) {
+        postRepository.deleteById(id);
+        return "redirect:/bookmain";
+    }
+
+
+    @PostMapping("/image")
+    public @ResponseBody String image(MultipartFile pic){
+        String imageFileName = pic.getOriginalFilename();
+
+        String path = "C:/SpringBootImage";
+
+        Path imagePath = Paths.get(path+imageFileName);
+
+        try{
+            Files.write(imagePath, pic.getBytes());
+        }catch (Exception e){
+
+        }
+
+        return imageFileName;
     }
 
 
