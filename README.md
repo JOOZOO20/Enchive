@@ -12,7 +12,7 @@ Enjoy + Archive 가 결합된 단어로 공연, 운동경기, 영화, 드라마 
 - 자바 : openjdk version "17.0.10" 2024-01-16 LTS
 - MYSQL : mysql  Ver 8.0.36
 < build 절차 >
-1. <b> git hub로 부터 spring파일을 다운 받습니다.</b< <br>
+1. <b> git hub로 부터 spring파일을 다운 받습니다.</b <br>
  https://github.com/JOOZOO20/Enchive/tree/main/final 해당 경로의 파일을 전부 다운로드 받거나, https://github.com/JOOZOO20/Enchive/blob/main/Enchive.zip 해당 ZIP파일을 다운받아 압축 해제시켜줍니다. 
 2. <b> github로부터 sql을 다운로드 받습니다. </b> <br>
 https://github.com/JOOZOO20/Enchive/blob/main/DB%20files/enchive.sql 해당 sql파일을 다운로드 받으면 됩니다. 
