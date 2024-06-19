@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookMain</title>
+
+  <link th:href="@{/css/font.css}" rel="stylesheet" />
+  <link th:href="@{/css/bookmain.css}" rel="stylesheet" />
+</head>
+<body>
+
+
+<div class="wrapper">
+  <div class="banner">
+    My Archive
+  </div>
+
+  <div class="bar">
+    <div class="main" onclick="location.href='/mainhome'"> Main </div>
+    <div class="this main" onclick="location.href='/bookmain'"> This main </div>
+    <div class="account" onclick="location.href='/account'"> account </div>
+  </div>
+
+
+</div>
+
+<div class="content">
+  <div class="add" onclick="location.href='/writing'">
+    <img src="../img/grayIcon.png" alt="이미지">
+    writing new story
+  </div>
+
+  <!-- 각 게시물 항목에 클릭 이벤트 추가 -->
+  <div th:each="post : ${posts}" class="post-item" th:onclick="'window.location.href=\'/edit?id=' + ${post.id} + '\''">
+    <h2 th:text="${post.title}">게시물 제목</h2>
+  </div>
+
+</div>
+</body>
+</html>

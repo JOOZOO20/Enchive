@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 수정</title>
+
+    <link th:href="@{/css/font.css}" rel="stylesheet" />
+    <link th:href="@{/css/writing.css}" rel="stylesheet" />
+</head>
+
+<body>
+<div class="allwrapper">
+    <div class="logo">
+        Enchive
+    </div>
+
+    <div class="navi">
+        <div class="main theme" th:onclick="|location.href='@{/mainhome}'|">메인 테마</div>
+        <div class="now theme" th:onclick="|location.href='@{/bookmain}'|">현재 테마</div>
+        <div class="account" th:onclick="|location.href='@{/account}'|">계정</div>
+    </div>
+
+    <div class="middleWrapper">
+<!--        <div class="photo">-->
+<!--            <div class="photo1" onclick="triggerUpload('fileUpload1')">-->
+<!--                <span id="textPhoto1" th:if="${post.img_Name == null}">오늘의 사진 추가하기 1</span>-->
+<!--                <input type="file" id="fileUpload1" name="photo1" accept="image/*" onchange="previewImage(event, 'photoPreview1', 'textPhoto1')" style="display: none;">-->
+<!--                <img id="photoPreview1" th:if="${post.img_Name != null}" th:src="@{'/uploads/id=' + ${post.id} + '/' + ${post.img_Name}}" th:style="${#strings.isEmpty(post.img_Name) ? 'display:none;' : 'display:block;'}"/>-->
+<!--            </div>-->
+<!--            <div class="photo2" onclick="triggerUpload('fileUpload2')">-->
+<!--                <span id="textPhoto2">오늘의 사진 추가하기 2</span>-->
+<!--                <input type="file" id="fileUpload2" name="photo2" accept="image/*" onchange="previewImage(event, 'photoPreview2', 'textPhoto2')" style="display: none;">-->
+<!--                <img id="photoPreview2" style="display: none;" />-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="wrapper">
+            <form action="/updatePost" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id" th:value="${post.id}"/>
+                <table>
+                    <tr>
+                        <td class="header">Title</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="제목을 입력하세요" name="title" th:value="${post.title}"></td>
+                    </tr>
+                    <tr>
+                        <td class="header">Comment</td>
+                    </tr>
+                    <tr>
+                        <td><textarea placeholder="내용을 입력하세요" name="detail" th:text="${post.content}"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="display: flex; justify-content: space-between;">
+                                <input type="submit" value="수정완료" style="width: 48%;">
+                                <a class="dele" th:href="@{'/delete?id=' + ${post.id}}" type="button" style="width: 48%;" onclick="return confirm('삭제하시겠습니까?')">삭제하기</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../js/writing.js"></script>
+</body>
+</html>
