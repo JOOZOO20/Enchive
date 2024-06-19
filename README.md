@@ -18,7 +18,8 @@ Enjoy + Archive 가 결합된 단어로 공연, 운동경기, 영화, 드라마 
 https://github.com/JOOZOO20/Enchive/blob/main/DB%20files/enchive.sql 해당 sql파일을 다운로드 받으면 됩니다. 
 3. cmd창을 켜고 'mysql -p -u root < D:\enchive.sql' 를 입력합니다.
 4. 인텔리제이 혹은 sts등 에서, enchive 스프링 파일을 run합니다.
-
+<br>
+<br>
 
 ### 📆 전체 개발 기간
 2024.03 ~ 2024.06 (예정)
