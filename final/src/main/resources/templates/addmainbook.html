@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 북 추가하기</title>
+    <link th:href="@{/css/font.css}" rel="stylesheet" />
+    <link th:href="@{/css/all.css}" rel="stylesheet" />
+    <link th:href="@{/css/newAddMainbook.css}" rel="stylesheet" />
+</head>
+<body>
+
+
+
+<form action="/addTheme" method="post" enctype="multipart/form-data">
+
+    <div class="info">
+        메인 북 추가하기
+    </div>
+
+
+    <div class="title">
+        <div class="text"> 메인북 title </div>
+        <div class="text_input">
+            <input type="text" name="title">
+        </div>
+    </div>
+
+    <div class="changeButton">
+        <button type="submit" th:onclick="|location.href='@{/mainhome}'|">완료하기</button>
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+.allWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.logo{
+    font-family: 'LOTTERIACHAB';
+    font-size: 4.8em;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+/*아이디, 비밀번호, 비밀번호 확인, 이름, 닉네임을
+텍스트와 input버튼이 가로로 동일하게 오도록 다중 선택자 적용*/
+.id, .pw, .name, .nickname{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 30px;
+    
+}
+
+.checkpw{
+    display: flex;
+    align-items: center;
+}
+
+#checkpwInvalid{
+    margin-bottom: 30px;
+}
+
+/*content 정렬*/
+.id, .pw, .checkpw, .name, .nickname, .checking, .donebutton{
+    width: 320px;
+    height: 50px;
+    justify-content: space-between;
+
+    font-family: 'SUITE-Regular';
+}
+
+/*아래 버튼과 간격을 두기 위함.*/
+.id, .nickname{
+    margin-bottom: 5px;
+}
+
+
+/*버튼들도 뒤부터 시작하게끔 배열하기 위함.*/
+/*버튼들 정렬하는 div*/
+.checking, .donebutton{
+    display: flex;
+
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+
+/*버튼 관련*/
+button{
+    width:205px;
+    height: 40px;
+
+    font-family: 'SUITE-Regular';
+
+    background-color: rgba(255, 220, 212, 1);
+    border: 2px rgba(255, 220, 212, 1) solid;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(255, 194, 194);
+    border: 2px rgb(255, 194, 194) solid;
+}
+
+
+input{
+    width: 200px;
+    height: 30px;
+
+    /*테두리 적용 관련*/
+    border-radius: 5px;
+    border-bottom: 1px black solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+::placeholder {
+    text-align: end;
+    padding-right: 10px;
+}
+
+
+
+/*invalid 관련 추가 css*/
+.invalid{
+    display: flex;
+    justify-content: end;
+
+    font-size: 10px;
+    color: red;
+}

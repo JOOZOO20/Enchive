@@ -1,0 +1,50 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    font-family: 'LOTTERIACHAB';
+    font-size: 4.8em;
+    color: rgb(255, 141, 141);
+    margin-top: 10vh;
+    margin-bottom: 50px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(53, 53, 53);
+
+    width: 40vw;
+    height: 30vh;
+    border: 1px rgb(255, 125, 125) solid;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Ownglyph_meetme-Rg';
+    font-size: 25px;
+
+    margin-bottom: 5vh;
+}
+
+button{
+    width: 25vw;
+    height: 8vh;
+    font-size: 2vw;
+    font-family: 'SUITE-Regular';
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+
+    background-color: rgba(255, 189, 189, 1);
+    border: 1px rgba(255, 189, 189, 1) solid;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgb(183, 183, 183);
+}
+
+button:hover{
+    color: rgb(95, 95, 95);
+    background-color: rgb(255, 165, 165);
+}

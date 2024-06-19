@@ -1,0 +1,64 @@
+
+/*전체를 감싸는 wrapper*/
+.wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.content{
+    display: flex;
+}
+
+.upside{
+    display: flex;
+    width: 100vw;
+    height: 30vh;
+
+    /*test*/
+    border: 1px black solid;
+}
+
+.backbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10vh 10vh 10vh 5vh;
+
+    /*test*/
+    border: 1px blue solid;
+}
+
+img{
+    width: 120px;
+    height: 50px;
+}
+
+.pagetitle{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 10vh 50% 10vh 20%;
+
+    height: 50%;
+
+    /*test*/
+    border: 1px saddlebrown solid;
+}
+
+.title{
+    display: flex;
+}
+
+.addcover{
+    display: flex;
+}
+
+.button{
+    border: 1px purple solid;
+}
+

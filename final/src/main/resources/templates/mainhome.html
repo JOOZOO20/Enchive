@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 홈</title>
+    <link th:href="@{/css/font.css}" rel="stylesheet" />
+    <link th:href="@{/css/mainhome.css}" rel="stylesheet" />
+    <!--아래는 vscode에서 test용도-->
+    <!-- <link rel="stylesheet" href="../static/css/mainhome.css"> -->
+
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="banner" th:onclick="|location.href='@{/mainhome}'|">
+        Main Home 🏠
+    </div>
+
+    <div class="content">
+        <div class="theme-list" th:if="${themes != null and !themes.isEmpty()}">
+            <div class="theme" th:each="theme : ${themes}">
+                <div class="minibox" th:onclick="'window.location.href=\'bookmain?id=' + ${theme.id} + '\''">
+                    <h2 class="theme-text" th:text="${theme.title}">테마 제목</h2>
+                    <!-- <img th:src="@{'/uploads/' + ${theme.theme_image}}" alt="테마 이미지" /> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="add">
+            <img th:src="@{/img/addlogo.png}" alt="이미지" th:onclick="|location.href='@{/addmainbook}'|">
+            추가하기
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>

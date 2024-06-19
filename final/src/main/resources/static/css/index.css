@@ -1,0 +1,150 @@
+body{
+    background-color: rgba(252, 239, 239, 1);
+
+}
+
+
+
+.mainDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* border: 2px black;
+    border-style: solid; */
+    width: 98vw;
+    height: 98vh;
+}
+
+
+
+.up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 40%;
+    height: 30%;
+
+    margin-top: 30px;
+    /*test*/
+    /* border: 1px orangered solid; */
+}
+
+
+
+/*아이디, 비밀번호, 로그인*/
+#inputButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    /* border: 1px rgb(0, 4, 255) solid; */
+
+}
+
+/*아이디, 비밀번호*/
+form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    /*
+        border: 2px blue;
+        border-style: solid; */
+}
+
+
+/*아이디,비번,로그인 인풋버튼*/
+.bts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+    border: 1px black;
+    border-style: solid;
+    border-radius: 10px;
+
+    box-shadow: 2px 2px 2px gray;
+    margin-bottom: 10px;
+
+    /*test*/
+    /* border: 1px darkmagenta solid; */
+}
+
+
+#loginBt{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color:rgba(255, 205, 205, 1);
+    border: 1px rgba(255, 205, 205, 1);
+
+
+    font-family: 'SUITE-Regular';
+    font-size: 15px;
+}
+
+.Encheive{
+    font-family: 'LOTTERIACHAB';
+    font-size: 100px;
+
+    margin-bottom: 10px;
+}
+
+.bottom{
+    display: flex;
+    width: 30%;
+    height: 70px;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+
+    /*해당 flex 산하가 아닌, 다른 component와의 관계*/
+    margin: 10px;
+
+    /*test*/
+    /* border: 2px rgba(255, 225, 0,20);
+    border-style: solid; */
+}
+
+
+/*로그인 아래의 회원가입, 아이디 및 비밀번호 찾기 버튼들*/
+.bottom_bts{
+    width: 100px;
+    height: 30px;
+
+    color: rgb(116, 104, 104);
+
+    border: none;
+    background-color: rgba(252, 239, 239, 1);
+
+    /* border: 1px rgba(182, 162, 162, 1);
+    border-style: solid; */
+    /* border-radius: 5px; */
+}
+
+
+/*로그인 버튼 hover*/
+#loginBt:hover{
+    background: rgb(245, 163, 163);
+}

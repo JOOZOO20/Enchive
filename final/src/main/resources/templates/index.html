@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link th:href="@{/css/index.css}" rel="stylesheet" />
+    <link th:href="@{/css/font.css}" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/font.css">
+
+</head>
+
+
+
+<body>
+
+<div class="mainDiv">
+    <!-- <div class="sub"> -->
+    <div class="Encheive">Encheive</div>
+
+    <div class="up">
+        <form method="post" action="/login">
+            <div class="id" id="inputButton" >
+                <input class="bts" type="text" name="userid" placeholder="아이디">
+            </div>
+
+            <div id="inputButton" class="password">
+                <input class="bts" type="password" name="password" placeholder="비밀번호">
+            </div>
+
+            <div id="inputButton" class="login">
+                <input id="loginBt" class="bts" type="submit" value="로그인">
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <div class="bottom">
+        <div class="signUp">
+            <input class="bottom_bts" type="submit" value="회원가입" th:onclick="|location.href='@{/signup}'|">
+        </div>
+        <!-- <div class="finId">
+            <input class="bottom_bts" type="submit" value="아이디 찾기" th:onclick="|location.href='@{/findId}'|">
+        </div>
+        <div class="findPw">
+            <input class="bottom_bts" type="submit" value="비밀번호 찾기" th:onclick="|location.href='@{/findPw}'|">
+        </div> -->
+    </div>
+    <!-- </div> -->
+
+</div>
+
+</body>
+
+</html>
